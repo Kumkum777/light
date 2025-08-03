@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Project</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(130, 193, 220);
+      }
+      body {
+        font-family: serif;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(2, 51, 94);
+      }
+      .main-heading h1 {
+        margin-bottom: 20px;
+      }
+
+      #on {
+        background-color: rgb(241, 182, 95);
+        border-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 7px 3px;
+        color: rgb(67, 68, 69);
+        font-weight: normal;
+        text-align: center;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: 21px;
+        transition: 400ms;
+        z-index: 100000;
+      }
+      #on:hover {
+        background-color: rgb(255, 162, 0);
+      }
+      img {
+        width: 200px;
+        height: 400px;
+      }
+      @media screen and (min-width: 300px) and (max-width: 768px) {
+        body {
+          font-family: serif;
+          height: 80vh;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          color: rgb(2, 51, 94);
+        }
+        .main-heading button {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        #on {
+          background-color: rgb(241, 182, 95);
+          border-color: rgb(255, 255, 255);
+          box-shadow: 0px 0px 0px 0px;
+          color: rgb(67, 68, 69);
+          font-weight: normal;
+          text-align: center;
+          border-radius: 3px;
+          padding: 10px;
+          font-size: 21px;
+          transition: 400ms;
+          z-index: 100000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-heading">
+      <h1>Can you turn the light On?</h1>
+      <button
+        id="on"
+        onclick="document.getElementById(`my-img`).src=`bulb_on-removebg-preview (3).png`"
+      >
+        turn On light
+      </button>
+      <img src="bulb_off-removebg-preview.png" id="my-img" />
+      <button
+        id="on"
+        onclick="document.getElementById(`my-img`).src=`bulb_off-removebg-preview.png`"
+      >
+        turn Off light
+      </button>
+    </div>
+  </body>
+</html>
